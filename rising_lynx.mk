@@ -42,5 +42,8 @@ RISING_CHIPSET := GS201
 # Gms variables
 WITH_GMS := true
 
+# Addons
+TARGET_HAS_UDFPS := true
+
 DEVICE_MANIFEST_FILE := \
 	device/google/lynx/manifest.xml
