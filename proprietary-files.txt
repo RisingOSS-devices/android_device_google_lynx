@@ -22,6 +22,9 @@ product/etc/felica/common.cfg
 product/etc/felica/mfm.cfg
 product/etc/felica/mfs.cfg
 
+# GCS
+product/priv-app/GCS/GCS.apk;PRESIGNED
+
 # Hardware info
 product/etc/permissions/com.google.android.hardwareinfo.xml
 product/framework/libhwinfo.jar
@@ -34,9 +37,24 @@ product/priv-app/HotwordEnrollmentXGoogleFUSIONPro/HotwordEnrollmentXGoogleFUSIO
 # IMS
 product/etc/sysconfig/allowlist_com.shannon.imsservice.xml
 
+# Misc
+product/priv-app/BetterBugStub/BetterBugStub.apk
+product/priv-app/KidsSupervisionStub/KidsSupervisionStub.apk
+product/priv-app/SSRestartDetector/SSRestartDetector.apk
+
+# Odad
+product/priv-app/OdadPrebuilt/OdadPrebuilt.apk;PRESIGNED
+
 # Permissions
+product/etc/default-permissions/default-permissions_diagnostictool.xml
+product/etc/permissions/com.google.SSRestartDetector.xml
 product/etc/permissions/privapp-permissions-google-p.xml:product/etc/permissions/privapp-permissions-google-p-lineage.xml
+product/etc/sysconfig/adaptivecharging.xml
+product/etc/sysconfig/game_service.xml
+product/etc/sysconfig/GoogleCamera_6gb_or_more_ram.xml
+product/etc/sysconfig/google_fi.xml
 product/etc/sysconfig/google-hiddenapi-package-whitelist.xml
+product/etc/sysconfig/google-install-constraints-package-allowlist.xml
 product/etc/sysconfig/nexus.xml
 product/etc/sysconfig/pixel_experience_2017.xml
 product/etc/sysconfig/pixel_experience_2018.xml
@@ -48,6 +66,7 @@ product/etc/sysconfig/pixel_experience_2021.xml
 product/etc/sysconfig/pixel_experience_2021_midyear.xml
 product/etc/sysconfig/pixel_experience_2022.xml
 product/etc/sysconfig/pixel_experience_2022_midyear.xml
+product/etc/sysconfig/quick_tap.xml
 
 # Radio
 product/etc/permissions/com.android.sdm.plugins.connmo.xml
@@ -57,8 +76,10 @@ product/lib/libdmengine.so
 product/lib/libdmjavaplugin.so
 product/lib64/libdmengine.so
 product/lib64/libdmjavaplugin.so
+product/priv-app/CarrierLocation/CarrierLocation.apk
 product/priv-app/CarrierSettings/CarrierSettings.apk;PRESIGNED
 product/priv-app/CarrierWifi/CarrierWifi.apk;PRESIGNED
+product/priv-app/CbrsNetworkMonitor/CbrsNetworkMonitor.apk
 product/priv-app/ConnMO/ConnMO.apk
 product/priv-app/DCMO/DCMO.apk
 product/priv-app/DMService/DMService.apk
@@ -69,6 +90,7 @@ product/priv-app/TetheringEntitlement/TetheringEntitlement.apk
 # VZW
 product/app/VZWAPNLib/VZWAPNLib.apk;PRESIGNED
 product/etc/permissions/com.android.omadm.service.xml
+product/etc/permissions/com.customermobile.preload.vzw.xml
 product/etc/permissions/com.google.omadm.trigger.xml
 product/etc/permissions/com.verizon.apn.xml
 product/etc/permissions/com.verizon.services.xml
@@ -81,10 +103,15 @@ product/priv-app/WfcActivation/WfcActivation.apk;PRESIGNED
 # system_ext partition
 
 # Camera extensions
+system_ext/app/PersistentBackgroundCameraServices/PersistentBackgroundCameraServices.apk
 system_ext/etc/permissions/com.google.android.camera.extensions.xml
 system_ext/etc/permissions/com.google.android.camerax.extensions.xml
+system_ext/etc/vintf/manifest/com.google.pixel.camera.services@1.0-service-google.xml
 system_ext/framework/com.google.android.camera.extensions.jar
 system_ext/framework/com.google.android.camerax.extensions.jar
+system_ext/framework/com.google.pixel.camera.connectivity.jar
+system_ext/framework/com.google.pixel.camera.services.cameraidremapper.jar
+system_ext/framework/com.google.pixel.camera.services.lyricconfigprovider.jar
 
 # Edge TPU
 system_ext/bin/hw/vendor.google.edgetpu_app_service@1.0-service
@@ -95,6 +122,9 @@ system_ext/lib/libedgetpu_dba.google.so
 system_ext/lib64/com.google.edgetpu_app_service-V2-ndk.so
 system_ext/lib64/com.google.edgetpu_vendor_service-V2-ndk.so
 system_ext/lib64/libedgetpu_dba.google.so
+
+# Face Enroll
+system_ext/priv-app/SettingsGoogleFutureFaceEnroll/SettingsGoogleFutureFaceEnroll.apk
 
 # HBM
 system_ext/lib64/libhbmsvmanager_jni.so
@@ -114,7 +144,11 @@ system_ext/priv-app/PixelQualifiedNetworksService/PixelQualifiedNetworksService.
 system_ext/priv-app/ShannonIms/ShannonIms.apk;PRESIGNED
 system_ext/priv-app/ShannonRcs/ShannonRcs.apk;PRESIGNED
 
+# Iwlan
+system_ext/priv-app/Iwlan/Iwlan.apk;PRESIGNED
+
 # Permissions
+system_ext/etc/permissions/com.android.qns.xml
 system_ext/etc/permissions/privapp-permissions-google-se.xml:system_ext/etc/permissions/privapp-permissions-google-se-lineage.xml
 
 # Radio
@@ -143,6 +177,10 @@ system_ext/priv-app/EuiccSupportPixelPermissions/EuiccSupportPixelPermissions.ap
 system_ext/priv-app/RilConfigService/RilConfigService.apk
 system_ext/priv-app/grilservice/grilservice.apk;PRESIGNED
 
+# Repair Mode
+system_ext/app/RepairMode/RepairMode.apk
+system_ext/etc/init/init.repair_mode.rc
+
 # RIL
 system_ext/app/OemRilHookService/OemRilHookService.apk
 system_ext/etc/permissions/com.samsung.slsi.telephony.oemril.xml
@@ -153,6 +191,10 @@ system_ext/lib/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so
 system_ext/lib64/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so
 system_ext/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so
 system_ext/priv-app/OemRilService/OemRilService.apk;PRESIGNED
+system_ext/priv-app/TelephonyGoogle/TelephonyGoogle.apk
+
+# UV
+system_ext/priv-app/UvExposureReporter/UvExposureReporter.apk;PRESIGNED
 
 # VZW
 system_ext/etc/permissions/com.verizon.llkagent.xml
