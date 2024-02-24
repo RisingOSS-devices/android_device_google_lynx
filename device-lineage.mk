@@ -21,6 +21,10 @@ PRODUCT_PACKAGES += \
 # HBM
 PRODUCT_PACKAGES += \
     HbmSVManagerOverlayLynx
+    
+# FaceUnlock
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.biometrics.face.xml
 
 # Kernel
 TARGET_PREBUILT_KERNEL := device/google/lynx-kernel/Image.lz4
