@@ -37,7 +37,7 @@ PRODUCT_NAME := rising_lynx
 
 # RisingOS variables
 RISING_MAINTAINER := EliteDarkKaiser
-RISING_CHIPSET := GS201
+RISING_CHIPSET := Google Tensor G2
 
 # Gms variables
 WITH_GMS := true
